@@ -1,0 +1,37 @@
+{% extends 'layout/app.html' %}
+
+{% block title %}
+    <title>ERPWEB - Registrar Usuário</title>
+{% endblock %}
+
+{% block scriptsheader %}
+<!-- inserir script/css no header -->
+{% endblock %}
+
+{% block header %}
+  <h1> ERPWEB - Registrar Usuário </h1>
+{% endblock %}
+    
+
+{% block content %}
+<div class="bg-gray-100 flex items-center justify-center min-h-screen" style="border-radius: 16px;">
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm">
+        <h2 class="text-xl font-bold mb-4 text-center text-gray-800">Registrar Usuário</h2>
+        {% if erro %}
+            <p class="text-red-500 text-sm mb-2 text-center">{{ erro }}</p>
+        {% endif %}
+        <form method="POST" class="space-y-4">
+             <input type="text" name="nome" placeholder="Nome" required class="w-full p-2 border rounded">
+              <input type="text" name="email" placeholder="E-mail" required class="w-full p-2 border rounded">
+            <input type="text" name="cpf" placeholder="CPF" required class="w-full p-2 border rounded">
+            <input type="password" name="password" placeholder="Senha" required class="w-full p-2 border rounded">
+            <button type="submit" value="Cadastrar" class="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700">Registrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+    
+{% block page_js %}
+<!-- inserir script no footer da pagina -->
+{% endblock %}
+    

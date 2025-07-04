@@ -1,0 +1,63 @@
+<!-- template v1.0 erpweb criados por  -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='img/Logo.png')}}">
+    <link href="{{url_for('static',filename='css/fontawesome/all.css')}}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> 
+    <link href="{{url_for('static',filename='css/template.css')}}" rel="stylesheet">
+     <script src="{{url_for('static',filename='js/sweetalert2@11.js')}}"></script> 
+     <script>
+        function confirmation(ev) {
+                ev.preventDefault();
+                Swal.fire({
+                    title: "Deseja deslogar?",
+                    text: "Para ter acesso ao sistema será necessário relogar!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Sim, deslogar!",
+                    cancelButtonText: "Cancelar"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Deslogando...",
+                            showConfirmButton: false,
+                            timer: 1200
+                        });
+                        window.location.href = "/logout";
+                    }
+                    
+                });
+            }
+        </script>
+    {% block scriptsheader %}{% endblock %}
+</head>
+<body>
+    <!-- menu importado -->
+     {% include 'layout/menu.html' %}
+
+<div class="header">
+    {% block header %}{% endblock %}
+</div>
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+{% block page_js %}{% endblock %}
+</body>
+
+
+{% include 'layout/footer.html' %}
+
+</html>
+
+
+
+
+
+

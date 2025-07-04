@@ -1,0 +1,63 @@
+{% extends 'layout/app.html' %}
+
+{% block title %}
+    <title>Contatos Rede Guapo</title>
+{% endblock %}
+
+{% block scriptsheader %}
+<!-- inserir script/css no header -->
+{% endblock %}
+
+{% block header %}
+  <h1> Contatos </h1>
+{% endblock %}
+    
+
+{% block content %}
+  <div class="text-center"> <span class="titulo"> Contatos da Rede Guapo!</span></div><br>
+          
+  <div class="p-2 text-center">
+      <table class="gridguapocontato table-auto md:table-fixed table-fixed p-0 border-separate border border-green-500" style="display: inline-table;">
+        <thead>
+          <tr>
+            <th class="border border-gray-600">Setor</th>
+            <th class="border border-gray-600">Telefones</th>
+            <th class="border border-gray-600">E-mail</th>
+            <th class="border border-gray-600">Responsabilidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-500 p-1 font-medium">TI - Infraestrutura</td>
+            <td class="border border-gray-500 p-1">(42) 99802-0194 <a href="https://wa.me/5542998020194?text=Olá,%20gostaria%20de%20algumas%20informações" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i></a></td>
+            <td class="border border-gray-500 p-1">tisuporte@redeguapo.com.br</td>
+            <td class="border border-gray-500 p-1">Infraestrutura, Redes de Internet, equipamentos, suporte.</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-500 p-1 font-medium">TI - Desenvolvimento</td>
+            <td class="border border-gray-500 p-1">(42) 99868-9658  <a href="https://wa.me/5542998689658?text=Olá,%20gostaria%20de%20algumas%20informações" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i></a></td>
+            <td class="border border-gray-500 p-1">tidesenvolvimento@redeguapo.com.br</td>
+            <td class="border border-gray-500 p-1">ERPWEB, Tableau</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-500 p-1 font-medium">RH</td>
+            <td class="border border-gray-500 p-1">(42) 99806-0086 <a href="https://wa.me/5542998060086?text=Olá,%20gostaria%20de%20algumas%20informações" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i></a></td>
+            <td class="border border-gray-500 p-1">rh@redeguapo.com.br</td>
+            <td class="border border-gray-500 p-1">Folha de ponto, Férias, Holerite.</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+{% endblock %}
+    
+{% block page_js %}
+<!-- inserir script no footer da pagina -->
+{% endblock %}
+    
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'layout/app.html' %}
+
+{% block title %}
+    <title>Controle de Usuário</title>
+{% endblock %}
+
+{% block scriptsheader %}
+<!-- inserir script/css no header -->
+{% endblock %}
+
+{% block header %}
+  <h1> Controle de Usuário </h1>
+{% endblock %}
+    
+
+{% block content %}
+  <div class="content">
+    <div class="text-start"></div>
+      <a href="{{ url_for('registrarcontroleusuario') }}" class="btn block px-4 py-2 text-sm text-white dark:hover:bg-green-500   dark:hover:text-yellow-300 "><i class="fa-solid fa-plus"></i> Criar novo Usuário</a>
+    </div>  
+    <div class="datatable">
+      
+    </div>
+
+  </div>
+{% endblock %}
+    
+{% block page_js %}
+<!-- inserir script no footer da pagina -->
+{% endblock %}
+    
+
+
+
+
+
+
+
